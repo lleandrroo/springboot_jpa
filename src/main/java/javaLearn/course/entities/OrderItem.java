@@ -81,6 +81,4 @@ public class OrderItem implements Serializable {
 		return Objects.equals(id, other.id) && Objects.equals(price, other.price)
 				&& Objects.equals(quantity, other.quantity);
 	}
-	
-	
 }
