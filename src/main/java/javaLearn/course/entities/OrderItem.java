@@ -31,7 +31,7 @@ public class OrderItem implements Serializable {
 		this.price = price;
 	}
 	
-	
+	@JsonIgnore
 	public Order getOrder() {
 		return id.getOrder();
 	}
@@ -64,6 +64,11 @@ public class OrderItem implements Serializable {
 		this.price = price;
 	}
 
+	public Double getSubtotal() {
+		return price * quantity;
+	}
+	
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, price, quantity);
